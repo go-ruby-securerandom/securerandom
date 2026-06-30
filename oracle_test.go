@@ -11,14 +11,21 @@ import (
 
 // runRuby runs a SecureRandom snippet under the system ruby and returns its
 // stdout. It skips the test on Windows (the CI windows lane has no ruby and the
-// org convention keeps the oracle off it) and wherever ruby is absent — the
-// deterministic, ruby-free tests alone hold coverage at 100%, so the no-ruby
-// lanes still pass the gate. $stdout.binmode keeps Windows text-mode (were ruby
-// ever present there) from corrupting the bytes.
+// org convention keeps the oracle off it), under qemu cross-arch emulation (the
+// host's native ruby cannot be exec'd from an emulated target process, and there
+// is no target-arch ruby), and wherever ruby is absent — the deterministic,
+// ruby-free tests alone hold coverage at 100%, so the no-ruby lanes still pass
+// the gate. $stdout.binmode keeps Windows text-mode (were ruby ever present
+// there) from corrupting the bytes.
 func runRuby(t *testing.T, body string) string {
 	t.Helper()
 	if runtime.GOOS == "windows" {
 		t.Skip("oracle: skipping on windows")
+	}
+	// Native ruby is only assured on the amd64/arm64 lanes; the other arches run
+	// the test binary under qemu-user, where exec'ing the host ruby is unreliable.
+	if runtime.GOARCH != "amd64" && runtime.GOARCH != "arm64" {
+		t.Skipf("oracle: skipping under cross-arch emulation (GOARCH=%s)", runtime.GOARCH)
 	}
 	if _, err := exec.LookPath("ruby"); err != nil {
 		t.Skip("oracle: ruby not installed")
@@ -125,9 +132,13 @@ func TestOracleAlphanumericFormat(t *testing.T) {
 	if !regexp.MustCompile(`^[A-Za-z0-9]+$`).MatchString(got) {
 		t.Fatalf("ruby alphanumeric = %q outside A-Za-z0-9", got)
 	}
-	custom := runRuby(t, "print SecureRandom.alphanumeric(20, chars: ['a','b','c'])")
-	if len(custom) != 20 || !regexp.MustCompile(`^[abc]+$`).MatchString(custom) {
-		t.Fatalf("ruby alphanumeric custom = %q", custom)
+	// The chars: keyword arrived in Ruby 3.3; gate it so older rubies (e.g. a
+	// distro's system ruby on the cross-arch lanes) do not fail the oracle.
+	if rubyVersionAtLeast(t, 3, 3) {
+		custom := runRuby(t, "print SecureRandom.alphanumeric(20, chars: ['a','b','c'])")
+		if len(custom) != 20 || !regexp.MustCompile(`^[abc]+$`).MatchString(custom) {
+			t.Fatalf("ruby alphanumeric custom = %q", custom)
+		}
 	}
 }
 
