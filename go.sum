@@ -4,6 +4,8 @@ github.com/emmansun/base64 v0.6.2 h1:Qd/W1hAs9kzcWmBozAOhlxFrjnZQR2dBN4og7WMInFs
 github.com/emmansun/base64 v0.6.2/go.mod h1:EjgM1HylRQjG1oaIMsF6+CzHsBCrTBm36890foTOELY=
 github.com/go-simd/base64 v0.0.0-20260627054622-4058a7093f4c h1:iA1vHw+pR44TUtDlviXz3P8pAExO1nSm39PMZ7MsuYU=
 github.com/go-simd/base64 v0.0.0-20260627054622-4058a7093f4c/go.mod h1:/nL/YHcchLkENbcFEEqAcfESIiwCM9/1H67LsSnd7EI=
+github.com/go-simd/base64 v0.0.0-20260703160615-1d0b2dddc996 h1:q3fyZ61j/I6dilPPgLHSTohxpDXPewe4Nnp7FQ4oJgE=
+github.com/go-simd/base64 v0.0.0-20260703160615-1d0b2dddc996/go.mod h1:/nL/YHcchLkENbcFEEqAcfESIiwCM9/1H67LsSnd7EI=
 github.com/go-simd/hex v0.0.0-20260627054622-d04d429c6aea h1:qVh9jV1QriPPfKtAb8au5pmVxKDk5Vl4nQUi/issQM0=
 github.com/go-simd/hex v0.0.0-20260627054622-d04d429c6aea/go.mod h1:q2/BdGuWJ9RahGzN+s+KtyacBAZFX15Nq0IikPFwKw0=
 github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc h1:9lRDQMhESg+zvGYmW5DyG0UqvY96Bu5QYsTLvCHdrgo=
