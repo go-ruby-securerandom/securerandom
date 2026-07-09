@@ -6,6 +6,8 @@ github.com/go-simd/base64 v0.0.0-20260627054622-4058a7093f4c h1:iA1vHw+pR44TUtDl
 github.com/go-simd/base64 v0.0.0-20260627054622-4058a7093f4c/go.mod h1:/nL/YHcchLkENbcFEEqAcfESIiwCM9/1H67LsSnd7EI=
 github.com/go-simd/hex v0.0.0-20260627054622-d04d429c6aea h1:qVh9jV1QriPPfKtAb8au5pmVxKDk5Vl4nQUi/issQM0=
 github.com/go-simd/hex v0.0.0-20260627054622-d04d429c6aea/go.mod h1:q2/BdGuWJ9RahGzN+s+KtyacBAZFX15Nq0IikPFwKw0=
+github.com/go-simd/hex v0.0.0-20260703184314-37129ad6db9d h1:zpmXgjC7bL+yOvbKeL/HWBZ3kzicyHMCKFU3spp/zog=
+github.com/go-simd/hex v0.0.0-20260703184314-37129ad6db9d/go.mod h1:q2/BdGuWJ9RahGzN+s+KtyacBAZFX15Nq0IikPFwKw0=
 github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc h1:9lRDQMhESg+zvGYmW5DyG0UqvY96Bu5QYsTLvCHdrgo=
 github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc/go.mod h1:bciPuU6GHm1iF1pBvUfxfsH0Wmnc2VbpgvbI9ZWuIRs=
 golang.org/x/sys v0.28.0 h1:Fksou7UEQUWlKvIdsqzJmUmCX3cZuD2+P3XyyzwMhlA=
