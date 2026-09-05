@@ -16,6 +16,8 @@ github.com/go-simd/hex v0.0.0-20260806072922-d990a927bb97 h1:0VAW42EezUIvwMUOBbl
 github.com/go-simd/hex v0.0.0-20260806072922-d990a927bb97/go.mod h1:3p3dIgLYVg4CoY/q7EfnbX8QpTn0t8z/Z+WNsjLs+AM=
 github.com/go-simd/hex v0.0.0-20260830125320-01720f8331b2 h1:nx2Xp2qi3vYRn5Yu/xmBIzDhsmEqkKJ/fszFmehTElg=
 github.com/go-simd/hex v0.0.0-20260830125320-01720f8331b2/go.mod h1:ZwRN06+N0wTIjn+mxT2NF/CbzTMAlfH/c0CKG8q5cwU=
+github.com/go-simd/hex v0.0.0-20260903220024-a8d22a843218 h1:TymapuhKzqUf8LNtsv8L4PJY/gz5bAaEbD2cpot1vFI=
+github.com/go-simd/hex v0.0.0-20260903220024-a8d22a843218/go.mod h1:ZwRN06+N0wTIjn+mxT2NF/CbzTMAlfH/c0CKG8q5cwU=
 github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc h1:9lRDQMhESg+zvGYmW5DyG0UqvY96Bu5QYsTLvCHdrgo=
 github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc/go.mod h1:bciPuU6GHm1iF1pBvUfxfsH0Wmnc2VbpgvbI9ZWuIRs=
 golang.org/x/sys v0.28.0 h1:Fksou7UEQUWlKvIdsqzJmUmCX3cZuD2+P3XyyzwMhlA=
